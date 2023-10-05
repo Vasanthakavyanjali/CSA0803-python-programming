@@ -1,0 +1,36 @@
+Print(N.VasanthaKavyanjali-192211609)
+class InvalidNameException(Exception):
+    pass
+
+class InvalidAgeException(Exception):
+    pass
+
+def validate_name(name):
+    if not name.isalpha():
+        raise InvalidNameException("Invalid name. Please enter a valid name.")
+
+def validate_age(age):
+    try:
+        age = int(age)
+        if age < 18:
+            raise InvalidAgeException("Sorry, you are not eligible to vote. You must be 18 or older.")
+    except ValueError:
+        raise InvalidAgeException("Invalid age. Please enter a valid age as a number.")
+
+try:
+    user_name = input("Enter your name: ")
+    validate_name(user_name)
+
+    user_age = input("Enter your age: ")
+    validate_age(user_age)
+
+    print(f"\nHello, {user_name}!")
+    print(f"You are {user_age} years old.")
+
+    if int(user_age) >= 18:
+        print("You are eligible to vote!")
+    else:
+        print("Sorry, you are not eligible to vote yet.")
+
+except (InvalidNameException, InvalidAgeException) as e:
+    print(f"Error: {e}")
