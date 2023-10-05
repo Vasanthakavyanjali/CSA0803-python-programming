@@ -1,0 +1,10 @@
+Print(N.VasanthaKavyanjali-192211609)
+states_dict = {"California": "CA", "New York": "NY", "Texas": "TX", "Florida": "FL"}
+states_dict["Washington"] = "WA"
+print("All Items in the Dictionary:")
+for state, code in states_dict.items():
+    print(f"{state}: {code}")
+state_to_check = "Oregon"
+default_code = "N/A"
+code_for_state = states_dict.get(state_to_check, default_code)
+print(f"\nCode for {state_to_check}: {code_for_state}")
