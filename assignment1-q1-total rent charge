@@ -1,0 +1,10 @@
+print(N.vasantha kavyanjali, regno:192211609)
+def calculate_rental_charge(new_movies, old_movies):
+    new_movie_rate = 75
+    old_movie_rate = 50
+    total_charge = (new_movies * new_movie_rate) + (old_movies * old_movie_rate)
+    return total_charge
+new_movies = int(input("Enter the number of new movies rented: "))
+old_movies = int(input("Enter the number of old movies rented: "))
+total_charge = calculate_rental_charge(new_movies, old_movies)
+print(f"The total rental charge is Rs. {total_charge}")
