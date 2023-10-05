@@ -1,0 +1,5 @@
+Print(N.VasanthaKavyanjali-192211609)
+countries_list = ["USA", "Canada", "Germany", "Japan", "Brazil", "India"]
+countries_set = set(countries_list)
+for country in countries_list:
+    print(country)
